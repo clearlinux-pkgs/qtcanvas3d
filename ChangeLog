@@ -1,8 +1,10 @@
-Qt 5.12 introduces many new features and improvements as well as bugfixes
-over the 5.11.x series. For more details, refer to the online documentation
-included in this distribution. The documentation is also available online:
+Qt 5.12.1 is a bug-fix release. It maintains both forward and backward
+compatibility (source and binary) with Qt 5.12.0.
 
-https://doc.qt.io/qt-5/index.html
+For more details, refer to the online documentation included in this
+distribution. The documentation is also available online:
+
+http://doc.qt.io/qt-5/index.html
 
 The Qt version 5.12 series is binary compatible with the 5.11.x series.
 Applications compiled for 5.11 will continue to run with 5.12.
@@ -15,9 +17,4 @@ https://bugreports.qt.io/
 Each of these identifiers can be entered in the bug tracker to obtain more
 information about a particular change.
 
-****************************************************************************
-*                                QtCanvas3D                                *
-****************************************************************************
-
- - Important Behavior Changes:
-   * [QTBUG-70510] Canvas3D module and API deprecated.
+ - This release contains only minor code improvements.
