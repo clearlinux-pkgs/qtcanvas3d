@@ -4,7 +4,7 @@
 #
 Name     : qtcanvas3d
 Version  : 5.12.3
-Release  : 16
+Release  : 17
 URL      : https://download.qt.io/official_releases/qt/5.12/5.12.3/submodules/qtcanvas3d-everywhere-src-5.12.3.tar.xz
 Source0  : https://download.qt.io/official_releases/qt/5.12/5.12.3/submodules/qtcanvas3d-everywhere-src-5.12.3.tar.xz
 Summary  : No detailed summary available
