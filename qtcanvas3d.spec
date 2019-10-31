@@ -4,7 +4,7 @@
 #
 Name     : qtcanvas3d
 Version  : 5.12.5
-Release  : 19
+Release  : 20
 URL      : https://download.qt.io/official_releases/qt/5.12/5.12.5/submodules/qtcanvas3d-everywhere-src-5.12.5.tar.xz
 Source0  : https://download.qt.io/official_releases/qt/5.12/5.12.5/submodules/qtcanvas3d-everywhere-src-5.12.5.tar.xz
 Summary  : No detailed summary available
@@ -42,6 +42,7 @@ license components for the qtcanvas3d package.
 
 %prep
 %setup -q -n qtcanvas3d-everywhere-src-5.12.5
+cd %{_builddir}/qtcanvas3d-everywhere-src-5.12.5
 
 %build
 export http_proxy=http://127.0.0.1:9/
@@ -54,13 +55,13 @@ test -r config.log && cat config.log
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1568396137
+export SOURCE_DATE_EPOCH=1572498299
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/qtcanvas3d
-cp LICENSE.GPL2 %{buildroot}/usr/share/package-licenses/qtcanvas3d/LICENSE.GPL2
-cp LICENSE.GPL3 %{buildroot}/usr/share/package-licenses/qtcanvas3d/LICENSE.GPL3
-cp LICENSE.GPL3-EXCEPT %{buildroot}/usr/share/package-licenses/qtcanvas3d/LICENSE.GPL3-EXCEPT
-cp LICENSE.LGPL3 %{buildroot}/usr/share/package-licenses/qtcanvas3d/LICENSE.LGPL3
+cp %{_builddir}/qtcanvas3d-everywhere-src-5.12.5/LICENSE.GPL2 %{buildroot}/usr/share/package-licenses/qtcanvas3d/4cc77b90af91e615a64ae04893fdffa7939db84c
+cp %{_builddir}/qtcanvas3d-everywhere-src-5.12.5/LICENSE.GPL3 %{buildroot}/usr/share/package-licenses/qtcanvas3d/8624bcdae55baeef00cd11d5dfcfa60f68710a02
+cp %{_builddir}/qtcanvas3d-everywhere-src-5.12.5/LICENSE.GPL3-EXCEPT %{buildroot}/usr/share/package-licenses/qtcanvas3d/e93757aefa405f2c9a8a55e780ae9c39542dfc3a
+cp %{_builddir}/qtcanvas3d-everywhere-src-5.12.5/LICENSE.LGPL3 %{buildroot}/usr/share/package-licenses/qtcanvas3d/f45ee1c765646813b442ca58de72e20a64a7ddba
 %make_install
 
 %files
@@ -74,7 +75,7 @@ cp LICENSE.LGPL3 %{buildroot}/usr/share/package-licenses/qtcanvas3d/LICENSE.LGPL
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/qtcanvas3d/LICENSE.GPL2
-/usr/share/package-licenses/qtcanvas3d/LICENSE.GPL3
-/usr/share/package-licenses/qtcanvas3d/LICENSE.GPL3-EXCEPT
-/usr/share/package-licenses/qtcanvas3d/LICENSE.LGPL3
+/usr/share/package-licenses/qtcanvas3d/4cc77b90af91e615a64ae04893fdffa7939db84c
+/usr/share/package-licenses/qtcanvas3d/8624bcdae55baeef00cd11d5dfcfa60f68710a02
+/usr/share/package-licenses/qtcanvas3d/e93757aefa405f2c9a8a55e780ae9c39542dfc3a
+/usr/share/package-licenses/qtcanvas3d/f45ee1c765646813b442ca58de72e20a64a7ddba
