@@ -4,7 +4,7 @@
 #
 Name     : qtcanvas3d
 Version  : 5.12.5
-Release  : 22
+Release  : 23
 URL      : https://download.qt.io/official_releases/qt/5.12/5.12.5/submodules/qtcanvas3d-everywhere-src-5.12.5.tar.xz
 Source0  : https://download.qt.io/official_releases/qt/5.12/5.12.5/submodules/qtcanvas3d-everywhere-src-5.12.5.tar.xz
 Summary  : No detailed summary available
@@ -22,6 +22,14 @@ BuildRequires : qtbase-staticdev
 
 %description
 3D Models and textures used in the example courtesy of http://nobiax.deviantart.com/
+
+%package examples
+Summary: examples components for the qtcanvas3d package.
+Group: Default
+
+%description examples
+examples components for the qtcanvas3d package.
+
 
 %package lib
 Summary: lib components for the qtcanvas3d package.
@@ -55,7 +63,7 @@ test -r config.log && cat config.log
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1572498299
+export SOURCE_DATE_EPOCH=1586271092
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/qtcanvas3d
 cp %{_builddir}/qtcanvas3d-everywhere-src-5.12.5/LICENSE.GPL2 %{buildroot}/usr/share/package-licenses/qtcanvas3d/4cc77b90af91e615a64ae04893fdffa7939db84c
@@ -66,6 +74,178 @@ cp %{_builddir}/qtcanvas3d-everywhere-src-5.12.5/LICENSE.LGPL3 %{buildroot}/usr/
 
 %files
 %defattr(-,root,root,-)
+
+%files examples
+%defattr(-,root,root,-)
+/usr/share/qt5/examples/canvas3d/3rdparty/ThreeJSLoader.js
+/usr/share/qt5/examples/canvas3d/3rdparty/gl-matrix.js
+/usr/share/qt5/examples/canvas3d/3rdparty/three.js
+/usr/share/qt5/examples/canvas3d/3rdparty/threex.planets.js
+/usr/share/qt5/examples/canvas3d/canvas3d.pro
+/usr/share/qt5/examples/canvas3d/framebuffer/framebuffer.pro
+/usr/share/qt5/examples/canvas3d/framebuffer/framebuffer.qrc
+/usr/share/qt5/examples/canvas3d/framebuffer/main.cpp
+/usr/share/qt5/examples/canvas3d/framebuffer/qml/framebuffer/framebuffer.js
+/usr/share/qt5/examples/canvas3d/framebuffer/qml/framebuffer/main.qml
+/usr/share/qt5/examples/canvas3d/framebuffer/qml/framebuffer/qtlogo.png
+/usr/share/qt5/examples/canvas3d/interaction/3dmodels.txt
+/usr/share/qt5/examples/canvas3d/interaction/interaction.pro
+/usr/share/qt5/examples/canvas3d/interaction/interaction.qrc
+/usr/share/qt5/examples/canvas3d/interaction/main.cpp
+/usr/share/qt5/examples/canvas3d/interaction/qml/interaction/barrel.jpg
+/usr/share/qt5/examples/canvas3d/interaction/qml/interaction/barrel.json
+/usr/share/qt5/examples/canvas3d/interaction/qml/interaction/interaction.js
+/usr/share/qt5/examples/canvas3d/interaction/qml/interaction/main.qml
+/usr/share/qt5/examples/canvas3d/interaction/readme.txt
+/usr/share/qt5/examples/canvas3d/jsonmodels/3dmodels.txt
+/usr/share/qt5/examples/canvas3d/jsonmodels/jsonmodels.pro
+/usr/share/qt5/examples/canvas3d/jsonmodels/main.cpp
+/usr/share/qt5/examples/canvas3d/jsonmodels/qml.qrc
+/usr/share/qt5/examples/canvas3d/jsonmodels/qml/jsonmodels/bush.json
+/usr/share/qt5/examples/canvas3d/jsonmodels/qml/jsonmodels/bush.png
+/usr/share/qt5/examples/canvas3d/jsonmodels/qml/jsonmodels/gold.jpg
+/usr/share/qt5/examples/canvas3d/jsonmodels/qml/jsonmodels/gold.json
+/usr/share/qt5/examples/canvas3d/jsonmodels/qml/jsonmodels/jsonmodels.js
+/usr/share/qt5/examples/canvas3d/jsonmodels/qml/jsonmodels/jsonmodels.qml
+/usr/share/qt5/examples/canvas3d/jsonmodels/qml/jsonmodels/pallet.jpg
+/usr/share/qt5/examples/canvas3d/jsonmodels/qml/jsonmodels/pallet.json
+/usr/share/qt5/examples/canvas3d/jsonmodels/qml/jsonmodels/rock.jpg
+/usr/share/qt5/examples/canvas3d/jsonmodels/qml/jsonmodels/rock.json
+/usr/share/qt5/examples/canvas3d/jsonmodels/qml/jsonmodels/woodbox.jpg
+/usr/share/qt5/examples/canvas3d/jsonmodels/qml/jsonmodels/woodbox.json
+/usr/share/qt5/examples/canvas3d/jsonmodels/readme.txt
+/usr/share/qt5/examples/canvas3d/quickitemtexture/main.cpp
+/usr/share/qt5/examples/canvas3d/quickitemtexture/qml/quickitemtexture/main.qml
+/usr/share/qt5/examples/canvas3d/quickitemtexture/qml/quickitemtexture/quickitemtexture.js
+/usr/share/qt5/examples/canvas3d/quickitemtexture/quickitemtexture.pro
+/usr/share/qt5/examples/canvas3d/quickitemtexture/quickitemtexture.qrc
+/usr/share/qt5/examples/canvas3d/textureandlight/main.cpp
+/usr/share/qt5/examples/canvas3d/textureandlight/qml/textureandlight/main.qml
+/usr/share/qt5/examples/canvas3d/textureandlight/qml/textureandlight/qtlogo.png
+/usr/share/qt5/examples/canvas3d/textureandlight/qml/textureandlight/textureandlight.js
+/usr/share/qt5/examples/canvas3d/textureandlight/textureandlight.pro
+/usr/share/qt5/examples/canvas3d/textureandlight/textureandlight.qrc
+/usr/share/qt5/examples/canvas3d/threejs/cellphone/cellphone.pro
+/usr/share/qt5/examples/canvas3d/threejs/cellphone/cellphone.qrc
+/usr/share/qt5/examples/canvas3d/threejs/cellphone/images/calendar.png
+/usr/share/qt5/examples/canvas3d/threejs/cellphone/images/camera.png
+/usr/share/qt5/examples/canvas3d/threejs/cellphone/images/clock.png
+/usr/share/qt5/examples/canvas3d/threejs/cellphone/images/contacts.png
+/usr/share/qt5/examples/canvas3d/threejs/cellphone/images/gallery.png
+/usr/share/qt5/examples/canvas3d/threejs/cellphone/images/games.png
+/usr/share/qt5/examples/canvas3d/threejs/cellphone/images/lock.png
+/usr/share/qt5/examples/canvas3d/threejs/cellphone/images/mail.png
+/usr/share/qt5/examples/canvas3d/threejs/cellphone/images/maps.png
+/usr/share/qt5/examples/canvas3d/threejs/cellphone/images/menu_background.jpg
+/usr/share/qt5/examples/canvas3d/threejs/cellphone/images/music.png
+/usr/share/qt5/examples/canvas3d/threejs/cellphone/images/plutomap1k.jpg
+/usr/share/qt5/examples/canvas3d/threejs/cellphone/images/qtlogo_with_alpha.png
+/usr/share/qt5/examples/canvas3d/threejs/cellphone/images/settings.png
+/usr/share/qt5/examples/canvas3d/threejs/cellphone/images/todo.png
+/usr/share/qt5/examples/canvas3d/threejs/cellphone/images/videos.png
+/usr/share/qt5/examples/canvas3d/threejs/cellphone/main.cpp
+/usr/share/qt5/examples/canvas3d/threejs/cellphone/qml/cellphone/cellphone.js
+/usr/share/qt5/examples/canvas3d/threejs/cellphone/qml/cellphone/cellphone_case.json
+/usr/share/qt5/examples/canvas3d/threejs/cellphone/qml/cellphone/cellphone_front.json
+/usr/share/qt5/examples/canvas3d/threejs/cellphone/qml/cellphone/cellphone_icon.json
+/usr/share/qt5/examples/canvas3d/threejs/cellphone/qml/cellphone/cellphoneapp.qml
+/usr/share/qt5/examples/canvas3d/threejs/cellphone/qml/cellphone/cellphonecanvas.qml
+/usr/share/qt5/examples/canvas3d/threejs/cellphone/qml/cellphone/colorselector.qml
+/usr/share/qt5/examples/canvas3d/threejs/cellphone/qml/cellphone/fpsdisplay.qml
+/usr/share/qt5/examples/canvas3d/threejs/cellphone/qml/cellphone/main.qml
+/usr/share/qt5/examples/canvas3d/threejs/controls/ControlEventSource.qml
+/usr/share/qt5/examples/canvas3d/threejs/oneqt/ImageCube.qml
+/usr/share/qt5/examples/canvas3d/threejs/oneqt/InfoSheet.qml
+/usr/share/qt5/examples/canvas3d/threejs/oneqt/Navibutton.qml
+/usr/share/qt5/examples/canvas3d/threejs/oneqt/SwipeArea.qml
+/usr/share/qt5/examples/canvas3d/threejs/oneqt/imagecube.js
+/usr/share/qt5/examples/canvas3d/threejs/oneqt/ios/Info.plist
+/usr/share/qt5/examples/canvas3d/threejs/oneqt/ios/OneQtIcon29x29.png
+/usr/share/qt5/examples/canvas3d/threejs/oneqt/ios/OneQtIcon29x29@2x.png
+/usr/share/qt5/examples/canvas3d/threejs/oneqt/ios/OneQtIcon29x29@2x~ipad.png
+/usr/share/qt5/examples/canvas3d/threejs/oneqt/ios/OneQtIcon29x29~ipad.png
+/usr/share/qt5/examples/canvas3d/threejs/oneqt/ios/OneQtIcon40x40@2x.png
+/usr/share/qt5/examples/canvas3d/threejs/oneqt/ios/OneQtIcon40x40@2x~ipad.png
+/usr/share/qt5/examples/canvas3d/threejs/oneqt/ios/OneQtIcon40x40~ipad.png
+/usr/share/qt5/examples/canvas3d/threejs/oneqt/ios/OneQtIcon50x50@2x~ipad.png
+/usr/share/qt5/examples/canvas3d/threejs/oneqt/ios/OneQtIcon50x50~ipad.png
+/usr/share/qt5/examples/canvas3d/threejs/oneqt/ios/OneQtIcon57x57.png
+/usr/share/qt5/examples/canvas3d/threejs/oneqt/ios/OneQtIcon57x57@2x.png
+/usr/share/qt5/examples/canvas3d/threejs/oneqt/ios/OneQtIcon60x60@2x.png
+/usr/share/qt5/examples/canvas3d/threejs/oneqt/ios/OneQtIcon72x72@2x~ipad.png
+/usr/share/qt5/examples/canvas3d/threejs/oneqt/ios/OneQtIcon72x72~ipad.png
+/usr/share/qt5/examples/canvas3d/threejs/oneqt/ios/OneQtIcon76x76@2x~ipad.png
+/usr/share/qt5/examples/canvas3d/threejs/oneqt/ios/OneQtIcon76x76~ipad.png
+/usr/share/qt5/examples/canvas3d/threejs/oneqt/main.cpp
+/usr/share/qt5/examples/canvas3d/threejs/oneqt/oneqt.pro
+/usr/share/qt5/examples/canvas3d/threejs/oneqt/oneqt.qml
+/usr/share/qt5/examples/canvas3d/threejs/oneqt/oneqt.qrc
+/usr/share/qt5/examples/canvas3d/threejs/oneqt/textures/dataviz.jpg
+/usr/share/qt5/examples/canvas3d/threejs/oneqt/textures/devices.png
+/usr/share/qt5/examples/canvas3d/threejs/oneqt/textures/embedded.png
+/usr/share/qt5/examples/canvas3d/threejs/oneqt/textures/iot.png
+/usr/share/qt5/examples/canvas3d/threejs/oneqt/textures/multiscreen.png
+/usr/share/qt5/examples/canvas3d/threejs/oneqt/textures/puzzle-pieces.png
+/usr/share/qt5/examples/canvas3d/threejs/oneqt/textures/qtlogo.png
+/usr/share/qt5/examples/canvas3d/threejs/oneqt/textures/qtlogosmall.png
+/usr/share/qt5/examples/canvas3d/threejs/planets/FpsDisplay.qml
+/usr/share/qt5/examples/canvas3d/threejs/planets/InfoSheet.qml
+/usr/share/qt5/examples/canvas3d/threejs/planets/PlanetButton.qml
+/usr/share/qt5/examples/canvas3d/threejs/planets/StyledSlider.qml
+/usr/share/qt5/examples/canvas3d/threejs/planets/images/earth.png
+/usr/share/qt5/examples/canvas3d/threejs/planets/images/earthbump1k.jpg
+/usr/share/qt5/examples/canvas3d/threejs/planets/images/earthcloudmapcolortrans.png
+/usr/share/qt5/examples/canvas3d/threejs/planets/images/earthmap1k.jpg
+/usr/share/qt5/examples/canvas3d/threejs/planets/images/earthspec1k.jpg
+/usr/share/qt5/examples/canvas3d/threejs/planets/images/galaxy_starfield.png
+/usr/share/qt5/examples/canvas3d/threejs/planets/images/jupiter.png
+/usr/share/qt5/examples/canvas3d/threejs/planets/images/jupitermap.jpg
+/usr/share/qt5/examples/canvas3d/threejs/planets/images/mars.png
+/usr/share/qt5/examples/canvas3d/threejs/planets/images/marsbump1k.jpg
+/usr/share/qt5/examples/canvas3d/threejs/planets/images/marsmap1k.jpg
+/usr/share/qt5/examples/canvas3d/threejs/planets/images/mercury.png
+/usr/share/qt5/examples/canvas3d/threejs/planets/images/mercurybump.jpg
+/usr/share/qt5/examples/canvas3d/threejs/planets/images/mercurymap.jpg
+/usr/share/qt5/examples/canvas3d/threejs/planets/images/moonbump1k.jpg
+/usr/share/qt5/examples/canvas3d/threejs/planets/images/moonmap1k.jpg
+/usr/share/qt5/examples/canvas3d/threejs/planets/images/neptune.png
+/usr/share/qt5/examples/canvas3d/threejs/planets/images/neptunemap.jpg
+/usr/share/qt5/examples/canvas3d/threejs/planets/images/plutobump1k.jpg
+/usr/share/qt5/examples/canvas3d/threejs/planets/images/plutomap1k.jpg
+/usr/share/qt5/examples/canvas3d/threejs/planets/images/saturn.png
+/usr/share/qt5/examples/canvas3d/threejs/planets/images/saturnmap.jpg
+/usr/share/qt5/examples/canvas3d/threejs/planets/images/saturnringcolortrans.png
+/usr/share/qt5/examples/canvas3d/threejs/planets/images/sun.png
+/usr/share/qt5/examples/canvas3d/threejs/planets/images/sunmap.jpg
+/usr/share/qt5/examples/canvas3d/threejs/planets/images/uranus.png
+/usr/share/qt5/examples/canvas3d/threejs/planets/images/uranusmap.jpg
+/usr/share/qt5/examples/canvas3d/threejs/planets/images/uranusringcolortrans.png
+/usr/share/qt5/examples/canvas3d/threejs/planets/images/venus.png
+/usr/share/qt5/examples/canvas3d/threejs/planets/images/venusbump.jpg
+/usr/share/qt5/examples/canvas3d/threejs/planets/images/venusmap.jpg
+/usr/share/qt5/examples/canvas3d/threejs/planets/ios/AppIcon29x29.png
+/usr/share/qt5/examples/canvas3d/threejs/planets/ios/AppIcon29x29@2x.png
+/usr/share/qt5/examples/canvas3d/threejs/planets/ios/AppIcon29x29@2x~ipad.png
+/usr/share/qt5/examples/canvas3d/threejs/planets/ios/AppIcon29x29~ipad.png
+/usr/share/qt5/examples/canvas3d/threejs/planets/ios/AppIcon40x40@2x.png
+/usr/share/qt5/examples/canvas3d/threejs/planets/ios/AppIcon40x40@2x~ipad.png
+/usr/share/qt5/examples/canvas3d/threejs/planets/ios/AppIcon40x40~ipad.png
+/usr/share/qt5/examples/canvas3d/threejs/planets/ios/AppIcon50x50@2x~ipad.png
+/usr/share/qt5/examples/canvas3d/threejs/planets/ios/AppIcon50x50~ipad.png
+/usr/share/qt5/examples/canvas3d/threejs/planets/ios/AppIcon57x57.png
+/usr/share/qt5/examples/canvas3d/threejs/planets/ios/AppIcon57x57@2x.png
+/usr/share/qt5/examples/canvas3d/threejs/planets/ios/AppIcon60x60@2x.png
+/usr/share/qt5/examples/canvas3d/threejs/planets/ios/AppIcon72x72@2x~ipad.png
+/usr/share/qt5/examples/canvas3d/threejs/planets/ios/AppIcon72x72~ipad.png
+/usr/share/qt5/examples/canvas3d/threejs/planets/ios/AppIcon76x76@2x~ipad.png
+/usr/share/qt5/examples/canvas3d/threejs/planets/ios/AppIcon76x76~ipad.png
+/usr/share/qt5/examples/canvas3d/threejs/planets/ios/Info.plist
+/usr/share/qt5/examples/canvas3d/threejs/planets/main.cpp
+/usr/share/qt5/examples/canvas3d/threejs/planets/planets.js
+/usr/share/qt5/examples/canvas3d/threejs/planets/planets.pro
+/usr/share/qt5/examples/canvas3d/threejs/planets/planets.qml
+/usr/share/qt5/examples/canvas3d/threejs/planets/planets.qrc
+/usr/share/qt5/examples/canvas3d/threejs/threejs.pro
 
 %files lib
 %defattr(-,root,root,-)
